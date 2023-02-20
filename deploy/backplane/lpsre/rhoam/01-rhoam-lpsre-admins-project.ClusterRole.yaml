@@ -130,3 +130,24 @@ rules:
   - deployments/scale
   verbs:
   - patch
+# LP SRE rbac changes
+- apiGroups:
+  - apps.openshift.io
+  resources:
+  - deploymentconfigs
+  verbs:
+  - patch  
+#   LP SRE rbac changes for routes
+- apiGroups:
+  - route.openshift.io
+  resources:
+  - routes
+  verbs:
+  - patch    
+ #   LP SRE rbac changes for statefulset
+- apiGroups:
+  - apps
+  resources:
+  - statefulsets
+  verbs:
+  - patch  
